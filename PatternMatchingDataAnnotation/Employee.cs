@@ -13,6 +13,10 @@ namespace PatternMatchingDataAnnotation
         [StringLength(50,MinimumLength = 3,ErrorMessage = "First name starts with Cap and has minimum 3 characters")]
         [DataType(DataType.Text)]
         public string FirstName { get; set; }
+
+        [StringLength(50,MinimumLength = 3,ErrorMessage = "LastName starts with Cap and of minimum 3 characyters")]
+        [DataType(DataType.Text)]
+        public string LastName { get; set; }
     }
 }
  
