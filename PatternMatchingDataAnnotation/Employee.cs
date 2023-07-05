@@ -23,6 +23,9 @@ namespace PatternMatchingDataAnnotation
         [StringLength(15,MinimumLength = 10,ErrorMessage ="Country Code follow by space and 10 digit number")]
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
+        [StringLength(50,MinimumLength =8,ErrorMessage ="Should at least One Upper Case,One Numberic Number and has exactly One Special Character")]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
 
     }
 }
