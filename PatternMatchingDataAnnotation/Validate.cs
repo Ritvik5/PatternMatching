@@ -15,6 +15,7 @@ namespace PatternMatchingDataAnnotation
 
             employee.FirstName = "Ritvik";
             employee.LastName = "Sharma";
+            employee.Email = "death.note56@gmail.com";
 
             ValidationContext validation = new ValidationContext(employee, null, null);
             List<ValidationResult> results = new List<ValidationResult>();
@@ -22,8 +23,8 @@ namespace PatternMatchingDataAnnotation
             bool valid = Validator.TryValidateObject(employee, validation, results, true);
             if (valid)
             {
-                Console.WriteLine($"FirstName: {employee.FirstName}\nLastName: {employee.LastName}");
-                Console.WriteLine("Is Valid");
+                Console.WriteLine($"FirstName: {employee.FirstName}\nLastName: {employee.LastName}\nEmailAddress: {employee.Email}");
+                Console.WriteLine("\nAre Valid");
             }
             else
             {
