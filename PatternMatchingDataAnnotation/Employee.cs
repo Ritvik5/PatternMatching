@@ -20,6 +20,10 @@ namespace PatternMatchingDataAnnotation
         [StringLength(50,MinimumLength = 3,ErrorMessage = "Eg. abc.xyz@bl.co.in -Email has 3 mandatory parts (abc, bl& co) and 2 optional (xyz & in) with precise @ and . positions")]
         [DataType (DataType.EmailAddress)]
         public string Email { get; set; }
+        [StringLength(15,MinimumLength = 10,ErrorMessage ="Country Code follow by space and 10 digit number")]
+        [DataType(DataType.PhoneNumber)]
+        public string PhoneNumber { get; set; }
+
     }
 }
  
